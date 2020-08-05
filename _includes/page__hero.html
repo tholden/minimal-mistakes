@@ -27,9 +27,9 @@
         {% endif %}
       </h1>
       {% if page.tagline %}
-        <p class="page__lead">{{ page.tagline | markdownify }}</p>
+        <div class="page__lead">{{ page.tagline | markdownify }}</div>
       {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify }}</p>
+        <div class="page__lead">{{ page.excerpt | markdownify }}</div>
       {% endif %}
       {% include post__meta.html %}
       {% if page.header.cta_url %}
