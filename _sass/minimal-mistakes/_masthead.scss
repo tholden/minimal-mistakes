@@ -2,13 +2,14 @@
    MASTHEAD
    ========================================================================== */
 
-.sticky {
+.stickymh {
   position: fixed;
   top : 0;
   z-index: 1000;
 }
 
 .masthead {
+  background-color: #ffffff;
   position: relative;
   border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
