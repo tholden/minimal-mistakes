@@ -31,13 +31,13 @@
 window.onscroll = function() { MoveMasthead() };
 
 var MastHeads = document.getElementsByClassName("masthead");
-var sticky = MastHeads[1].offsetTop;
+var sticky = MastHeads[0].offsetTop;
 
 function MoveMasthead() {
   if (window.pageYOffset >= sticky) {
-    MastHeads[1].classList.add("sticky")
+    MastHeads[0].classList.add("sticky")
   } else {
-    MastHeads[1].classList.remove("sticky");
+    MastHeads[0].classList.remove("sticky");
   }
 }
 </script>
