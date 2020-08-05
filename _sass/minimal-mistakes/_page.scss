@@ -80,6 +80,7 @@ body {
 .page__lead {
   font-family: $global-font-family;
   font-size: $ptype-size-4;
+  mix-blend-mode: difference;
 }
 
 .page__content {
@@ -206,9 +207,11 @@ body {
 
     .page__title {
       font-size: $ptype-size-2;
+	  mix-blend-mode: difference;
 
       @include breakpoint($small) {
         font-size: $ptype-size-1;
+		mix-blend-mode: difference;
       }
     }
   }
