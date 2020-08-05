@@ -26,3 +26,18 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+<script>
+window.onscroll = function() { MoveMasthead() };
+
+var MastHeads = document.getElementByClassName("masthead");
+var sticky = MastHeads[1].offsetTop;
+
+function MoveMasthead() {
+  if (window.pageYOffset >= sticky) {
+    MastHeads[1].classList.add("sticky")
+  } else {
+    MastHeads[1].classList.remove("sticky");
+  }
+}
+</script>
