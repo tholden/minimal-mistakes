@@ -80,6 +80,11 @@ body {
 .page__lead {
   font-family: $global-font-family;
   font-size: $type-size-4;
+  
+  p {
+	background-color: #000;
+	opacity: 0.5;
+  }
 }
 
 .page__content {
