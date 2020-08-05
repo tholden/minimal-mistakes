@@ -172,7 +172,8 @@ body {
     margin-bottom: 2em;
     padding: 3em 0;
     @include clearfix;
-    background-size: 100vw 48.611111111111111111111111111111vw;
+	min-height: 48.611111111111111111111111111111vw;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     -webkit-animation: $intro-transition;
