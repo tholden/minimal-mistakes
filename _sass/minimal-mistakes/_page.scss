@@ -171,7 +171,8 @@ body {
     margin-bottom: 2em;
     padding: 3em 0;
     @include clearfix;
-	min-height: 48.611111111111111111111111111111vw;
+	min-height: 100vh;
+	background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
