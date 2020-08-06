@@ -202,7 +202,9 @@ body {
     }
 
     .page__lead {
-      max-width: $medium;
+      @include breakpoint($x-large) {
+        max-width: $x-large;
+      }
     }
 
     .page__title {
