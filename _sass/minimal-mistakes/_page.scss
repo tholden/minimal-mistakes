@@ -171,7 +171,7 @@ body {
     margin-bottom: 2em;
     padding: 3em 0;
     @include clearfix;
-	min-height: 100vh;
+	min-height: calc( 100vh - 1px - 4em );
 	background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
