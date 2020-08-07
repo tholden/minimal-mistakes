@@ -6,9 +6,5 @@ layout: archive
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
-  {% if page.sort_order == 'reverse' %}
-    {% include posts-category.html taxonomy=page.taxonomy type=entries_layout sort_order=reverse %}
-  {% else %}
-    {% include posts-category.html taxonomy=page.taxonomy type=entries_layout sort_order=forward %}
-  {% endif %}
+  {% include posts-category.html taxonomy=page.taxonomy type=entries_layout sort_order=page.sort_order %}
 </div>
