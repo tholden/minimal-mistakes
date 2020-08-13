@@ -16,6 +16,8 @@
   //   transform: translate3d(0, 0, 0);
   // }
 
+  text-align: left;
+
   @include breakpoint($large) {
     float: left;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
