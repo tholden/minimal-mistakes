@@ -5,7 +5,26 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}/50x50.jpg" 
+		  srcset="
+			{{ logo_path | relative_url }}/50x50.jpg 50w,
+			{{ logo_path | relative_url }}/100x100.jpg 100w,
+			{{ logo_path | relative_url }}/150x150.jpg 150w,
+			{{ logo_path | relative_url }}/200x200.jpg 200w,
+			{{ logo_path | relative_url }}/250x250.jpg 250w,
+			{{ logo_path | relative_url }}/300x300.jpg 300w,
+			{{ logo_path | relative_url }}/350x350.jpg 350w,
+			{{ logo_path | relative_url }}/400x400.jpg 400w,
+			{{ logo_path | relative_url }}/450x450.jpg 450w,
+			{{ logo_path | relative_url }}/500x500.jpg 500w,
+			{{ logo_path | relative_url }}/550x550.jpg 550w,
+			{{ logo_path | relative_url }}/600x600.jpg 600w,
+			{{ logo_path | relative_url }}/650x650.jpg 650w,
+			{{ logo_path | relative_url }}/700x700.jpg 700w,
+			{{ logo_path | relative_url }}/750x750.jpg 750w,
+			{{ logo_path | relative_url }}/800x800.jpg 800w
+		  "
+		  alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">
           {{ site.masthead_title | default: site.title }}
