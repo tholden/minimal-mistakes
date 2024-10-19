@@ -6,7 +6,29 @@
   {% if author.avatar %}
     <div class="author__avatar">
       <a href="{{ author.home | default: '/' | absolute_url }}">
-        <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image" class="u-photo">
+        <img 
+		  src="{{ author.avatar | relative_url }}/800x800.jpg" 
+		  srcset="
+			{{ author.avatar | relative_url }}/50x50.jpg 50w,
+			{{ author.avatar | relative_url }}/100x100.jpg 100w,
+			{{ author.avatar | relative_url }}/150x150.jpg 150w,
+			{{ author.avatar | relative_url }}/200x200.jpg 200w,
+			{{ author.avatar | relative_url }}/250x250.jpg 250w,
+			{{ author.avatar | relative_url }}/300x300.jpg 300w,
+			{{ author.avatar | relative_url }}/350x350.jpg 350w,
+			{{ author.avatar | relative_url }}/400x400.jpg 400w,
+			{{ author.avatar | relative_url }}/450x450.jpg 450w,
+			{{ author.avatar | relative_url }}/500x500.jpg 500w,
+			{{ author.avatar | relative_url }}/550x550.jpg 550w,
+			{{ author.avatar | relative_url }}/600x600.jpg 600w,
+			{{ author.avatar | relative_url }}/650x650.jpg 650w,
+			{{ author.avatar | relative_url }}/700x700.jpg 700w,
+			{{ author.avatar | relative_url }}/750x750.jpg 750w,
+			{{ author.avatar | relative_url }}/800x800.jpg 800w
+		  "
+		  alt="{{ author.name }}" 
+		  itemprop="image" 
+		  class="u-photo">
       </a>
     </div>
   {% endif %}
