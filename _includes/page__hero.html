@@ -17,11 +17,16 @@
 {% endif %}
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
-{% if overlay_img_path %}
 <style scoped>
 .page__hero {
+{% if page.header.overlay_color %}
+  background-color: {{ page.header.overlay_color | default: 'transparent' }};
+{% endif %}
+{% if overlay_img_path %}
   background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/165x80.jpg');
+{% endif %}
 }
+{% if overlay_img_path %}
 @media (min-width: 166px) {
   .page__hero {
 	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/329x160.jpg');
@@ -127,9 +132,9 @@
 	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/4032x1960.jpg');
   }
 }
-</style>
 {% endif %}
-<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}" style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %}">
+</style>
+<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}">
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
