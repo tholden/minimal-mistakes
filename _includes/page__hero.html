@@ -18,121 +18,117 @@
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
 <style scoped>
-.page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-{% if page.header.overlay_color %}
-  background-color: {{ page.header.overlay_color | default: 'transparent' }};
-{% endif %}
-{% if overlay_img_path %}
-  background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/165x80.jpg');
-{% endif %}
-}
-{% if overlay_img_path %}
-@media (min-width: 166px) {
   .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/329x160.jpg');
+    {% if page.header.overlay_color %} background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %}
+    {% if overlay_img_path %} background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/165x80.jpg');{% endif %}
   }
-}
-@media (min-width: 330px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/494x240.jpg');
+  {% if overlay_img_path %}
+  @media (min-height: 81px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/329x160.jpg');
+    }
   }
-}
-@media (min-width: 495px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/658x320.jpg');
+  @media (min-height: 161px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/494x240.jpg');
+    }
   }
-}
-@media (min-width: 659px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/823x400.jpg');
+  @media (min-height: 241px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/658x320.jpg');
+    }
   }
-}
-@media (min-width: 824px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/987x480.jpg');
+  @media (min-height: 321px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/823x400.jpg');
+    }
   }
-}
-@media (min-width: 988px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1152x560.jpg');
+  @media (min-height: 401px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/987x480.jpg');
+    }
   }
-}
-@media (min-width: 1153px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1317x640.jpg');
+  @media (min-height: 481px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1152x560.jpg');
+    }
   }
-}
-@media (min-width: 1318px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1481x720.jpg');
+  @media (min-height: 561px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1317x640.jpg');
+    }
   }
-}
-@media (min-width: 1482px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1646x800.jpg');
+  @media (min-height: 641px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1481x720.jpg');
+    }
   }
-}
-@media (min-width: 1647px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1810x880.jpg');
+  @media (min-height: 721px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1646x800.jpg');
+    }
   }
-}
-@media (min-width: 1811px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1975x960.jpg');
+  @media (min-height: 801px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1810x880.jpg');
+    }
   }
-}
-@media (min-width: 1976px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2139x1040.jpg');
+  @media (min-height: 881px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/1975x960.jpg');
+    }
   }
-}
-@media (min-width: 2140px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2304x1120.jpg');
+  @media (min-height: 961px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2139x1040.jpg');
+    }
   }
-}
-@media (min-width: 2305px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2469x1200.jpg');
+  @media (min-height: 1041px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2304x1120.jpg');
+    }
   }
-}
-@media (min-width: 2470px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2633x1280.jpg');
+  @media (min-height: 1121px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2469x1200.jpg');
+    }
   }
-}
-@media (min-width: 2634px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2798x1360.jpg');
+  @media (min-height: 1201px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2633x1280.jpg');
+    }
   }
-}
-@media (min-width: 2799px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2962x1440.jpg');
+  @media (min-height: 1281px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2798x1360.jpg');
+    }
   }
-}
-@media (min-width: 2963px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/3127x1520.jpg');
+  @media (min-height: 1361px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/2962x1440.jpg');
+    }
   }
-}
-@media (min-width: 3128px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/3291x1600.jpg');
+  @media (min-height: 1441px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/3127x1520.jpg');
+    }
   }
-}
-@media (min-width: 3292px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/3456x1680.jpg');
+  @media (min-height: 1521px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/3291x1600.jpg');
+    }
   }
-}
-@media (min-width: 3457px) {
-  .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
-	background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/4032x1960.jpg');
+  @media (min-height: 1601px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/3456x1680.jpg');
+    }
   }
-}
-{% endif %}
+  @media (min-height: 1681px) {
+    .page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %} {
+      background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}/4032x1960.jpg');
+    }
+  }
+  {% endif %}
 </style>
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}">
   {% if page.header.overlay_color or page.header.overlay_image %}
